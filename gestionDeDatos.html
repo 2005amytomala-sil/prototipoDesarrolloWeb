@@ -34,7 +34,7 @@
                     </ul>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="formulario.html  ">Registrarse</a>
+                        <a class="nav-link" href="registroIncidencias.html">Registrar Incidencia</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -215,11 +215,11 @@
     }
     </script>
     <script>
-        const myModalContact = document.getElementById('myModal')
-        const myInputContact = document.getElementById('myInput')
+        const myModalContact = document.getElementById('staticBackdrop')
+        const myInputContact = document.getElementById('id')
 
-        myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
+        myModalContact.addEventListener('shown.bs.modal', () => {
+        myInputContact.focus()
         })
     </script>
 </body>

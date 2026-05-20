@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <img src="img/logo.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-center">
             <a class="navbar-brand ms-3">
-            Sistema administrativo</a>
+            Sistema incidencias</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,11 +31,13 @@
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="#">Damaris</a>
+                            <a class="dropdown-item" href="#">Ismael</a>
+                            <a class="dropdown-item" href="#">Steven</a>
                         </li>
                     </ul>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="formulario.html  ">Registrarse</a>
+                        <a class="nav-link" href="registroIncidencias.html">Registrar Incidencia</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -48,16 +50,16 @@
 
     <!--Cards-->
     <div id="inicioSection" class="container">
-        <h2 class="text-center mt-2">Gestión de inventario</h2>
+        <h2 class="text-center mt-2">Gestión de incidencias</h2>
             <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 text-center">
                     <div  class="card h-100 card h-100 shadow">
-                        <img src="img/productos.png" class="mx-auto d-block" width="100" height="100"  alt="logo productos">
+                        <img src="img/incidencias.png" class="mx-auto d-block" width="100" height="100"  alt="Total de incidencias">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Total de productos</h5>
+                            <h5 class="card-title">Total de incidencias</h5>
                             <p class="card-text">
-                                <strong>245</strong><br>
-                                Productos registrados en el inventario 
+                                <strong>128</strong><br>
+                                Incidencias registradas en el sistema 
                             </p>
                         </div>
                     </div>
@@ -65,12 +67,12 @@
 
                 <div class="col-12 col-md-6 col-lg-3 text-center">
                     <div class="card h-100 card h-100 shadow" >
-                        <img src="img/productosAgotados.png" class="mx-auto d-block" width="100" height="100"  alt="logo productos agotados" >
+                        <img src="img/incCriticas.png" class="mx-auto d-block" width="100" height="100"  alt="Incidencias críticas" >
                         <div class="card-body">
-                            <h5 class="card-title">Productos agotados</h5>
+                            <h5 class="card-title">Incidencias críticas</h5>
                             <p class="card-text">
                                 <strong>12</strong><br>
-                                Productos sin stock disponible
+                                Casos de alta prioridad pendientes
                             </p>
                         </div>
                     </div>
@@ -78,12 +80,12 @@
 
                 <div class="col-12 col-md-6 col-lg-3 text-center">
                     <div  class="card h-100 card h-100 shadow">
-                        <img src="img/ventas.png" class="mx-auto d-block" width="104" height="96" alt="logo ventas del dia">
+                        <img src="img/incResueltas.png" class="mx-auto d-block" width="104" height="96" alt="lIncidencias resueltas">
                         <div class="card-body">
-                            <h5 class="card-title">Ventas del día</h5>
+                            <h5 class="card-title">Incidencias resueltas</h5>
                             <p class="card-text">
-                                <strong>$1,250</strong><br>
-                                Ventas registradas hoy
+                                <strong>89</strong><br>
+                                Casos solucionados correctamente
                             </p>
                         </div>
                     </div>
@@ -91,49 +93,16 @@
 
                 <div class="col-12 col-md-6 col-lg-3 text-center">
                     <div class="card h-100 card h-100 shadow">
-                        <img src="img/proveedores.png" class="mx-auto d-block" width="100" height="100" alt="logo proveedores">
+                        <img src="img/incProceso.png" class="mx-auto d-block" width="100" height="100" alt="Incidencias en proceso">
                         <div class="card-body">
-                            <h5 class="card-title">Proveedores</h5>
+                            <h5 class="card-title">Incidencias en proceso</h5>
                             <p class="card-text">
-                                <strong>18</strong><br>
-                                Proveedores registrados
+                                <strong>20</strong><br>
+                                Casos en curso de atención
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <!--Tabla productos agregados-->
-                <div class="card-body ms-3 me-3 card h-100 shadow">
-                    <h5 class="card-title text-center">Últimos productos agregados</h5>
-                        <table class="table table-hover">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Stock</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>   
-                            <tbody>
-                                <tr>
-                                    <td>Mouse</td>
-                                    <td>15</td>
-                                    <td>Disponible</td>
-                                </tr>
-                                <tr>
-                                    <td>Teclado</td>
-                                    <td>20</td>
-                                    <td>Disponible</td>
-                                </tr>
-                                <tr>
-                                    <td>Audífonos BT</td>
-                                    <td>13</td>
-                                    <td>Disponible</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
 
             </div>
     </div>  
@@ -143,7 +112,7 @@
 
     <footer class="bg-primary-subtle text-center text-lg-start mt-5">
     <div class="text-center p-3">
-         2026 Sistema de Inventario 
+         2026 Sistema de Incidencias 
     </div>
     </footer>
 </body>    

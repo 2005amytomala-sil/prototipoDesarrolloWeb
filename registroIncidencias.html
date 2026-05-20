@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></head>
+</head>
+<body>
+        <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
+        <div class="container-fluid">
+            <img src="img/logo.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-center">
+            <a class="navbar-brand ms-3">
+            Gestión de inventario</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestionDeDatos.html">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Damaris</a>
+                        </li>
+                    </ul>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Registrar Incidencia</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<!--Tabla de incidencias-->
+    <div class="container mt-5">
+        <h5 class="text-center">Administra el registro de incidencias.</h5>
+    <div class="card mx-auto col-lg-12">
+        <div class ="table-responsive">
+        <table class="table table-hover">   
+            <thead >
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo de Incidencia</th>
+                    <th>Descripción</th>
+                    <th>Ubicación</th>
+                    <th>Nivel de prioridad</th>
+                    <th>Estado</th>
+                    <th>Responsable</th>
+                </tr>
+            </thead>   
+            <tbody id="tablaIncidencia">
+                <tr>
+                    <td>1</td>
+                    <td>Bache profundo en avenida principal</td>
+                    <td>Se detectó un bache que dificulta el tránsito y puede causar accidentes.</td>
+                    <td>Av. Eleodoro Solórzano, La Libertad</td>
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Poste de alumbrado dañado</td>
+                    <td>El poste no funciona durante la noche y deja la zona oscura.</td>
+                    <td>Barrio Mariscal Sucre, Santa Elena</td>
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fuga de agua en vía pública</td>
+                    <td>Se reporta desperdicio constante de agua por tubería rota.</td>
+                    <td>Calle 10 y Av. 5, Salinas</td>
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Acumulación de basura</td>
+                    <td>Existe acumulación de desechos desde hace varios días.</td>
+                    <td>Mercado Central de La Libertad</td>
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Semáforo fuera de servicio</td>
+                    <td>El semáforo permanece apagado causando congestión vehicular.</td>
+                    <td>Intersección Av. Quito y Calle Guayaquil</td>
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table></div>
+    </div>
+
+   <!--Agregar nuevas incidencias-->
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Nueva Incidencia
+        </button>
+         <!-- Modal -->
+        <div class="modal fade text-start" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Incidencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formIncidencia">
+                    <div class="mb-3">
+                        <label class="form-label">Id</label>
+                        <input id="incidenciaId" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Titulo de Incidencia</label>
+                        <input id="tituloIncidencia" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Descripción</label>
+                        <input id="descripcion" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Ubicación</label>
+                        <input id="ubicacion" type="text" step="0.01" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" onclick="agregarIncidencia()">Guardar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script>
+    function agregarIncidencia() {
+
+        // obtener valores correctamente
+        const id = document.getElementById("id").value;
+        const tituloIncidencia = document.getElementById("tituloIncidencia").value;
+        const descripcion = document.getElementById("descripcion").value;
+        const ubicacion = document.getElementById("ubicacion").value;
+
+        // crear fila
+        const fila = `
+            <tr>
+                <td>${id}</td>
+                <td>${tituloIncidencia}</td>
+                <td>${descripcion}</td>
+                <td>${ubicacion}</td>
+                <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
+                        <option>Por Definir</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
+                        <option>Crítico</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="estado">
+                        <option>En proceso</option>
+                        <option>Pendiente</option>
+                        <option>Resuelta</option>
+                        </select>
+                    </td>
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
+                        <option>Amy Tomalá</option>
+                        <option>Ismael Anchundia</option>
+                        <option>Steven Muñoz</option>
+                        </select>
+                    </td>
+            </tr>
+        `;
+
+        // agregar a la tabla
+        document.getElementById("tablaIncidencia").innerHTML += fila;
+
+        // limpiar inputs
+        document.getElementById("id").value = "";
+        document.getElementById("tituloIncidencia").value = "";
+        document.getElementById("descripcion").value = "";
+        document.getElementById("ubicacion").value = "";
+
+        //Cerrar modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
+        modal.hide();
+    }
+    </script>
+
+    <!--Focus XD-->
+    <script>
+        const myModalContact = document.getElementById('staticBackdrop')
+        const myInputContact = document.getElementById('incidenciaId')
+
+        myModalContact.addEventListener('shown.bs.modal', () => {
+        myInputContact.focus()
+        })
+    </script>
+<footer>
+</footer>
+</body>
+</html>
