@@ -45,9 +45,149 @@
         </div>
     </nav>
 
+<!--Tabla productos-->
+    <div class="container mt-5">
+        <h5 class="text-center">Administra el registro de incidencias.</h5>
+    <div class="card mx-auto col-lg-8">
+        <table class="table table-hover">   
+            <thead >
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo de Incidencia</th>
+                    <th>Descripción</th>
+                    <th>Ubicación</th>
+                    <th>Nivel de prioridad</th>
+                    <th>Estado</th>
+                    <th>Responsable</th>
+                </tr>
+            </thead>   
+            <tbody id="tablaProductos">
+                <tr>
+                    <td>1</td>
+                    <td>Mouse</td>
+                    <td>15</td>
+                    <td>$20.00</td>
+                    <td><select class="form-select" aria-label="Estado del producto">
+                        <option>Activo</option>
+                        <option>No activo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Teclado</td>
+                    <td>20</td>
+                    <td>$35.00</td>
+                    <td><select class="form-select" aria-label="Estado del producto">
+                        <option>Activo</option>
+                        <option>No activo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Audífonos </td>
+                    <td>13</td>
+                    <td>$25.00</td>
+                    <td><select class="form-select" aria-label="Estado del producto">
+                        <option>Activo</option>
+                        <option>No activo</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
+   <!--Agregar nuevas incidencias-->
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Nuevo producto
+        </button>
+         <!-- Modal -->
+        <div class="modal fade text-start" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Formulario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formUsuario">
+                    <div class="mb-3">
+                        <label class="form-label">Id</label>
+                        <input id="id" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Producto</label>
+                        <input id="producto" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Stock</label>
+                        <input id="stock" type="number" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Precio</label>
+                        <input id="precio" type="number" step="0.01" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" onclick="agregarProducto()">Guardar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+  <script>
+    function agregarProducto() {
+
+        // obtener valores correctamente
+        const id = document.getElementById("id").value;
+        const producto = document.getElementById("producto").value;
+        const stock = document.getElementById("stock").value;
+        const precio = document.getElementById("precio").value;
+
+        // crear fila
+        const fila = `
+            <tr>
+                <td>${id}</td>
+                <td>${producto}</td>
+                <td>${stock}</td>
+                <td>${precio}</td>
+                <td><select class="form-select form-select-sm">
+                    <option>Activo</option>
+                    <option>No activo</option>
+                    </select>
+                </td>
+            </tr>
+        `;
+
+        // agregar a la tabla
+        document.getElementById("tablaProductos").innerHTML += fila;
+
+        // limpiar inputs
+        document.getElementById("id").value = "";
+        document.getElementById("producto").value = "";
+        document.getElementById("stock").value = "";
+        document.getElementById("precio").value = "";
+
+        //Cerrar modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
+        modal.hide();
+    }
+    </script>
+<footer>
+
+</footer>
 </body>
 </html>
