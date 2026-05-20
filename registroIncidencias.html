@@ -48,7 +48,8 @@
 <!--Tabla de incidencias-->
     <div class="container mt-5">
         <h5 class="text-center">Administra el registro de incidencias.</h5>
-    <div class="card mx-auto col-lg-8">
+    <div class="card mx-auto col-lg-12">
+        <div class ="table-responsive">
         <table class="table table-hover">   
             <thead >
                 <tr>
@@ -67,7 +68,7 @@
                     <td>Bache profundo en avenida principal</td>
                     <td>Se detectó un bache que dificulta el tránsito y puede causar accidentes.</td>
                     <td>Av. Eleodoro Solórzano, La Libertad</td>
-                    <td><select class="form-select" aria-label="nivelDePrioridad">
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
                         <option>Por Definir</option>
                         <option>Bajo</option>
                         <option>Medio</option>
@@ -75,13 +76,13 @@
                         <option>Crítico</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="estado">
+                    <td><select class="form-select form-select-sm" aria-label="estado">
                         <option>En proceso</option>
                         <option>Pendiente</option>
                         <option>Resuelta</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="responsable">
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
                         <option>Amy Tomalá</option>
                         <option>Ismael Anchundia</option>
                         <option>Steven Muñoz</option>
@@ -94,7 +95,7 @@
                     <td>Poste de alumbrado dañado</td>
                     <td>El poste no funciona durante la noche y deja la zona oscura.</td>
                     <td>Barrio Mariscal Sucre, Santa Elena</td>
-                    <td><select class="form-select" aria-label="nivelDePrioridad">
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
                         <option>Por Definir</option>
                         <option>Bajo</option>
                         <option>Medio</option>
@@ -102,13 +103,13 @@
                         <option>Crítico</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="estado">
+                    <td><select class="form-select form-select-sm" aria-label="estado">
                         <option>En proceso</option>
                         <option>Pendiente</option>
                         <option>Resuelta</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="responsable">
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
                         <option>Amy Tomalá</option>
                         <option>Ismael Anchundia</option>
                         <option>Steven Muñoz</option>
@@ -120,7 +121,7 @@
                     <td>Fuga de agua en vía pública</td>
                     <td>Se reporta desperdicio constante de agua por tubería rota.</td>
                     <td>Calle 10 y Av. 5, Salinas</td>
-                    <td><select class="form-select" aria-label="nivelDePrioridad">
+                    <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
                         <option>Por Definir</option>
                         <option>Bajo</option>
                         <option>Medio</option>
@@ -128,13 +129,13 @@
                         <option>Crítico</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="estado">
+                    <td><select class="form-select form-select-sm" aria-label="estado">
                         <option>En proceso</option>
                         <option>Pendiente</option>
                         <option>Resuelta</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="responsable">
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
                         <option>Amy Tomalá</option>
                         <option>Ismael Anchundia</option>
                         <option>Steven Muñoz</option>
@@ -142,7 +143,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
     </div>
 
    <!--Agregar nuevas incidencias-->
@@ -162,7 +163,7 @@
                 <form id="formIncidencia">
                     <div class="mb-3">
                         <label class="form-label">Id</label>
-                        <input id="id" type="text" class="form-control">
+                        <input id="incidenciaId" type="text" class="form-control">
                     </div>
 
                     <div class="mb-3">
@@ -210,7 +211,7 @@
                 <td>${tituloIncidencia}</td>
                 <td>${descripcion}</td>
                 <td>${ubicacion}</td>
-                <td><select class="form-select" aria-label="nivelDePrioridad">
+                <td><select class="form-select form-select-sm" aria-label="nivelDePrioridad">
                         <option>Por Definir</option>
                         <option>Bajo</option>
                         <option>Medio</option>
@@ -218,13 +219,13 @@
                         <option>Crítico</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="estado">
+                    <td><select class="form-select form-select-sm" aria-label="estado">
                         <option>En proceso</option>
                         <option>Pendiente</option>
                         <option>Resuelta</option>
                         </select>
                     </td>
-                    <td><select class="form-select" aria-label="responsable">
+                    <td><select class="form-select form-select-sm" aria-label="responsable">
                         <option>Amy Tomalá</option>
                         <option>Ismael Anchundia</option>
                         <option>Steven Muñoz</option>
@@ -250,15 +251,14 @@
 
     <!--Focus XD-->
     <script>
-        const myModalContact = document.getElementById('myModal')
-        const myInputContact = document.getElementById('myInput')
+        const myModalContact = document.getElementById('staticBackdrop')
+        const myInputContact = document.getElementById('incidenciaId')
 
-        myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
+        myModalContact.addEventListener('shown.bs.modal', () => {
+        myInputContact.focus()
         })
     </script>
 <footer>
-
 </footer>
 </body>
 </html>
